@@ -17,7 +17,7 @@
     <select id="listLog" resultMap="baseMap">
         select
         <include refid="baseColumns"/>
-        from t_student_common_log
+        from t_common_log
         <where>
             <if test="username!=null and username!=''">
                 and username=#{username}
@@ -36,7 +36,7 @@
     </select>
 
     <insert id="insertLog">
-        insert into t_student_common_log (<include refid="baseColumns"/>)
+        insert into t_common_log (<include refid="baseColumns"/>)
         values (#{id},#{username},#{token},#{logType},#{logInfo},sysdate())
     </insert>
 </mapper>

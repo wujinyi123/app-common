@@ -26,7 +26,7 @@
     <select id="login" resultMap="baseMap">
         select
         <include refid="baseColumns"/>
-        from t_student_common_user
+        from t_common_user
         where status='1' and username=#{username} and password=#{password}
     </select>
 </mapper>
